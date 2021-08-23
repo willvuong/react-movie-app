@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
 //test
-import './App.css';
 
 import Header from './components/Header.js'
 import Movies from './components/Movies.js'
+import Footer from './components/Footer.js'
 
 
 const api = "https://api.themoviedb.org/3/search/movie?api_key=19b7796656e3bbec3cfc102c4b11e268&query=batman"
@@ -40,10 +40,11 @@ const App = () => {
   }
 
   return (
-    <div className="App">
+    <div className="App bg-dark">
       <Header movieSearch={movieSearch} searchKeyword={searchKeyword} searchEvent={searchEvent} />
       {/* <SearchBar movieSearch={movieSearch} searchKeyword={searchKeyword} searchEvent={searchEvent} /> */}
       <Movies movies={movies} />
+      <Footer />
     </div>
   );
 }

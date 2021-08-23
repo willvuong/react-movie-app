@@ -10,10 +10,10 @@ const Movie = ({ movie }) => {
     }
   
     return (
-        <div className="movie">
-            <img src={tmdbImgPath + movie.poster_path} alt="poster" width="120" />
+        <div className="Movie col-lg-2 col-md-4 col-sm-6 col-xs-12 align-items-center">
+            <img src={tmdbImgPath + movie.poster_path} className="img-fluid" alt="poster" width="300"/>
 
-            <div className="movieInfo">
+            {/* <div className="movieInfo">
                 <h3>{movie.title}</h3>
                 <span><FaStar /> {movie.vote_average}</span>
             </div>
@@ -22,7 +22,7 @@ const Movie = ({ movie }) => {
                 <h3>Overview: </h3>
                 <p>{movie.overview}</p>
                 <input type="button" value="View" onClick={viewTmdbMovie}/>
-            </div>
+            </div> */}
         </div>
     )
 }
